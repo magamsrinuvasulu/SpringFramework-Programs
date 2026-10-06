@@ -1,0 +1,20 @@
+package spring;
+public class Patient {
+	private int patientId;
+	private String patientName;
+	private long mobileNo;
+	Patient(){
+		System.out.println("This is patient without parameters");
+	}
+	Patient(int patientId,String patientName,long mobileNo){
+		System.out.println("This is patient with parameters");
+		this.patientId=patientId;
+		this.patientName=patientName;
+		this.mobileNo=mobileNo;
+	}
+	@Override
+	public String toString() {
+		return "Patient [patientId=" + patientId + ", patientName=" + patientName + ", mobileNo=" + mobileNo + "]";
+	}
+	
+}
