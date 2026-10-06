@@ -1,0 +1,12 @@
+package spring;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+public class PatientSpringApplication {
+	public static void main(String[] args) {
+		ApplicationContext container=new ClassPathXmlApplicationContext("constructorApplication.xml");
+		Patient p1=new Patient();
+		System.out.println(p1);
+		Patient p2=new Patient(101,"Srinuvasulu",995132450);
+		System.out.println(p2);
+	}
+}
