@@ -1,0 +1,16 @@
+package spring;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+public class StudentSpringApplication {
+    public static void main(String[] args) {
+        ApplicationContext container =new ClassPathXmlApplicationContext("StudentApplication.xml");
+        Students s4 = (Students) container.getBean("student4");
+        System.out.println("Roll No: " + s4.getRollNo());
+        System.out.println("Names: " + s4.getNames());
+        System.out.println("Email: " + s4.getEmail());
+        System.out.println("CGPA: " + s4.getMarks().getCgpa());
+        System.out.println("SGPA: " + s4.getMarks().getSgpa());
+        System.out.println("Aadhar Number: "+ s4.getDetails().getAdharNumber());
+        System.out.println("DOB: "+ s4.getDetails().getDob());
+    }
+}
