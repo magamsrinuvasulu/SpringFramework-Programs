@@ -1,0 +1,22 @@
+package spring;
+public class StudentMarks {
+	private String cgpa;
+	private String sgpa;
+	public String getCgpa() {
+		return cgpa;
+	}
+	public void setCgpa(String cgpa) {
+		this.cgpa = cgpa;
+	}
+	public String getSgpa() {
+		return sgpa;
+	}
+	public void setSgpa(String sgpa) {
+		this.sgpa = sgpa;
+	}
+	@Override
+	public String toString() {
+		return "StudentMarks [cgpa=" + cgpa + ", sgpa=" + sgpa + "]";
+	}
+	
+}
