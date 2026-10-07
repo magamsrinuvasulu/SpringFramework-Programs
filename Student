@@ -1,0 +1,71 @@
+package spring;
+import java.util.*;
+public class Students {
+    private Set<Integer> rollNo;
+    private String names;
+    private String email;
+    private StudentMarks marks;
+    private StudentsDetails details;
+    public StudentsDetails getDetails() {
+        return details;
+    }
+    public void setDetails(StudentsDetails details) {
+        this.details = details;
+    }
+    public Students() {
+        super();
+        System.out.println("Zero Argument Constructor");
+    }
+    public Students(Set<Integer> rollNo) {
+        super();
+        this.rollNo = rollNo;
+        System.out.println("1-Argument Constructor:Set");
+    }
+    public Students(String names, String email) {
+        super();
+        this.names = names;
+        this.email = email;
+        System.out.println("2-Argument Constructor:String");
+    }
+    public Students(Set<Integer> rollNo, String names,
+                     String email, StudentMarks marks) {
+        super();
+        this.rollNo = rollNo;
+        this.names = names;
+        this.email = email;
+        this.marks = marks;
+        System.out.println("4-Argument Constructor");
+    }
+    public Set<Integer> getRollNo() {
+        return rollNo;
+    }
+    public void setRollNo(Set<Integer> rollNo) {
+        this.rollNo = rollNo;
+    }
+    public String getNames() {
+        return names;
+    }
+    public void setNames(String names) {
+        this.names = names;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public StudentMarks getMarks() {
+        return marks;
+    }
+    public void setMarks(StudentMarks marks) {
+        this.marks = marks;
+    }
+    @Override
+    public String toString() {
+        return "Students [rollNo=" + rollNo
+                + ", names=" + names
+                + ", email=" + email
+                + ", marks=" + marks
+                + ", details=" + details + "]";
+    }
+}
