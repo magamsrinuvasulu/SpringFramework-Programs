@@ -1,0 +1,28 @@
+package spring;
+public class DoctorDetails {
+	private String name;
+	private String specialist;
+	private int doctorId;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSpecialist() {
+		return specialist;
+	}
+	public void setSpecialist(String specialist) {
+		this.specialist = specialist;
+	}
+	public int getDoctorId() {
+		return doctorId;
+	}
+	public void setDoctorId(int doctorId) {
+		this.doctorId = doctorId;
+	}
+	@Override
+	public String toString() {
+		return "DoctorDetails [name=" + name + ", specialist=" + specialist + ", doctorId=" + doctorId + "]";
+	}
+}
