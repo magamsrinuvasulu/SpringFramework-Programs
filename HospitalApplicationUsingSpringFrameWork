@@ -1,0 +1,18 @@
+package spring;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+public class HospitalApplicationUsingSpringFrameWork {
+    public static void main(String[] args) {
+        ApplicationContext container =new ClassPathXmlApplicationContext("patientApplicationUsingAutowireByName.xml");
+        Hospital hospital1 = (Hospital) container.getBean("hospital");
+        System.out.println("Hospital: " + hospital1.getName());
+        System.out.println("--------Patient Details---------");
+        System.out.println("Patient ID: " + hospital1.getPatient().getId());
+        System.out.println("Patient Name: " + hospital1.getPatient().getName());
+        System.out.println("--------Doctor Details----------");
+        System.out.println("Doctor ID: " + hospital1.getDoctor().getDoctorId());
+        System.out.println("Doctor Name: " + hospital1.getDoctor().getName());
+        System.out.println("Specialist: " + hospital1.getDoctor().getSpecialist());
+        ((ClassPathXmlApplicationContext) container).close();
+    }
+}
