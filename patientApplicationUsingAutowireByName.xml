@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+       <bean id="patient" class="spring.PatientDetails">
+       <property name="name" value="Srinuvasulu"></property>
+       <property name="id" value="101"></property>
+       </bean>
+       <bean id="doctor" class="spring.DoctorDetails">
+       <property name="name" value="Mahendra Reddy"></property>
+       <property name="specialist" value="Cardiologist"></property>
+       <property name="doctorId" value="628"></property>
+       </bean>
+       <bean id="hospital" class="spring.Hospital" autowire="byName">
+       <property name="name" value="ManiDeepak Hospital"></property>
+       </bean></beans>
